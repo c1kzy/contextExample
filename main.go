@@ -5,14 +5,14 @@ import (
 	"log"
 	"os"
 	"os/signal"
-	"contextexample/server"
+	"contextExample/server"
 )
 
 func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	go handleSignals(cancel)
 
-	if err := server.startServer(ctx); err != nil {
+	if err := server.StartServer(ctx); err != nil {
 		log.Fatal(err)
 	}
 }

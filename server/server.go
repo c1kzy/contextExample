@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func startServer(ctx context.Context) error {
+func StartServer(ctx context.Context) error {
 	laddr, err := net.ResolveTCPAddr("tcp", ":8080")
 	if err != nil {
 		return err
